@@ -66,11 +66,11 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-            <a href="mailto:hello@liverpoolpropertymaintenance.com">hello@liverpoolpropertymaintenance.com</a> <br/>
+            <a href="mailto:hello@liverpoolpropertymaintenance.com">📧 hello@liverpoolpropertymaintenance.com</a> <br/>
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
               
                 Call today 
-                +44 7907 772 626
+              📞  0151 388 0026
               </a>
             </li>
            
