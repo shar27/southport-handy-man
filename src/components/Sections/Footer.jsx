@@ -39,7 +39,7 @@ export default function Contact() {
       <BottomFooter>
     
       <div className=""><h4>📧 hello@liverpoolpropertymaintenance.com</h4></div>
-        <div><h4>📞 0151 388 0026</h4></div>
+        <div><h4>📞 0333 360 6113</h4></div>
         
     
       </BottomFooter>
