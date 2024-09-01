@@ -22,16 +22,17 @@ export default function TopNavbar() {
 
   return (
     <>
+    <ContactInfoSmallScreen>
+        <a href="mailto:hello@propertymaintenancemanchester.co.uk">📧 hello@liverpoolpropertymaintenance.com</a>
+        <a href="tel:03333606113">📞 0333 360 6113</a>
+      </ContactInfoSmallScreen>
       <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
       {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
-      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "80px" }}>
+      <Wrapper className="flexCenter animate whiteBg" style={y > 100 ? { height: "60px" } : { height: "100px" }}>
         <NavInner className="container flexSpaceCenter">
           <Link className="pointer flexNullCenter" to="home" smooth={true}>
             <LogoIcon />
-            <h1 style={{ marginLeft: "15px" }} className="font20 extraBold">
-              Property <br/>Maintenance Liverpool
-            </h1>
-            
+          
           </Link>
           <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
@@ -47,16 +48,12 @@ export default function TopNavbar() {
                 Services
               </Link>
             </li>
-            {/* <li className="semiBold font15 pointer">
+            <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="projects" spy={true} smooth={true} offset={-80}>
-                Projects
+                Locations
               </Link>
-            </li> */}
-            {/* <li className="semiBold font15 pointer">
-              <Link activeClass="active" style={{ padding: "10px 15px" }} to="blog" spy={true} smooth={true} offset={-80}>
-                Blog
-              </Link>
-            </li> */}
+            </li>
+           
           
             <li className="semiBold font15 pointer">
               <Link activeClass="active" style={{ padding: "10px 15px" }} to="contact" spy={true} smooth={true} offset={-80}>
@@ -66,11 +63,11 @@ export default function TopNavbar() {
           </UlWrapper>
           <UlWrapperRight className="flexNullCenter">
             <li className="semiBold font15 pointer">
-            <a href="mailto:hello@liverpoolpropertymaintenance.com">📧 hello@liverpoolpropertymaintenance.com</a> <br/>
+            <a href="mailto:hello@propertymaintenancebristol.co.uk" style={{ padding: "10px 30px 10px 0" }}>📧 hello@liverpoolpropertymaintenance.com</a> <br/>
               <a href="/" style={{ padding: "10px 30px 10px 0" }}>
               
                 Call today 
-              📞  0333 360 6113
+                📞 0333 360 6113
               </a>
             </li>
            
@@ -81,12 +78,46 @@ export default function TopNavbar() {
   );
 }
 
+const ContactInfoSmallScreen = styled.div`
+  display: none;
+  background-color: #003366; /* Dark blue background */
+  color: white; /* White text */
+  text-align: center;
+  padding: 10px 0;
+  font-weight:700;
+  a {
+    color: white;
+    display: block;
+    padding: 5px 0;
+  }
+  @media (max-width: 760px) {
+  position:fixed;
+  width:100%;
+    display: block;
+    z-index:999;
+  }
+`;
+
+
 const Wrapper = styled.nav`
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 0px;
   left: 0;
   z-index: 999;
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+
+
+    @media (max-width: 760px) {
+    display: block;
+    width: 100%;
+   
+  position: fixed;
+  top: 80px;
+  left: 0;
+  z-index: 999;
+  transition: height 0.3s ease-in-out, top 0.3s ease-in-out;
+  }
 `;
 const NavInner = styled.div`
   position: relative;
@@ -110,7 +141,9 @@ const UlWrapper = styled.ul`
   }
 `;
 const UlWrapperRight = styled.ul`
-  @media (max-width: 760px) {
+ 
+
+@media (max-width: 760px) {
     display: none;
   }
 `;
