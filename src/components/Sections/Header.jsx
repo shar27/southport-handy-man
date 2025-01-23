@@ -17,7 +17,7 @@ export default function Header() {
         <HeadingTag>
             Property maintenance specialists covering Liverpool, Manchester  & surrounding areas.
           </HeadingTag>
-          <h1 className="extraBold font60">We are a Property Maintenance Company.</h1>
+          <h1 className="extraBold font60">Liverpool Property Maintenance.</h1>
           
           
           <HeaderP className="font13 semiBold">
