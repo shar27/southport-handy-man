@@ -1,16 +1,14 @@
 import React from "react";
+import styled from "styled-components";
+import { useState, useEffect } from "react";
 // Sections
 import TopNavbar from "../components/Nav/TopNavbar";
 import Header from "../components/Sections/Header";
 import Services from "../components/Sections/Services";
-import styled from "styled-components";
-import { useState, useEffect } from "react";
-import Projects from "../components/Sections/Projects";
 import Reviews from "../components/Sections/Reviews";
-import Locations from "../components/Sections/Locations";
-import Blog from "../components/Sections/Blog";
 import Contact from "../components/Sections/Contact";
-import Footer from "../components/Sections/Footer"
+import Footer from "../components/Sections/Footer";
+import Locations from "../components/Sections/Locations";
 import WhatsApp from '../assets/img/whatsapp-business-icon.jpeg';
 
 export default function Landing() {
@@ -33,10 +31,10 @@ export default function Landing() {
       behavior: "smooth",
     });
   };
+
   return (
     <>
-   
-   <TopNavbar />
+      <TopNavbar />
       <Header />
       <FloatWrapper>
         <a href="https://wa.me/447907772626">
@@ -61,12 +59,9 @@ export default function Landing() {
           </ArrowButton>
         )}
       </FloatWrapper>
-      <Reviews/>
+      <Reviews />
       <Services />
-      <Projects/>
       <Locations/>
-      {/* <Projects /> */}
-     
       <Contact />
       <Footer />
     </>

@@ -1,19 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import TopNavbar from "../Nav/TopNavbar";
-import Footer from '../Sections/Footer';
-import Contact from "..//Sections/Contact";
-import bathroom from '../../assets/img/projects/bathroom.jpg'
-import bathroomtiles from '../../assets/img/projects/bathroomtiles.jpg'
-import bathroomtiles2 from '../../assets/img/projects/bathroomtiles2.jpg'
-import livingroom from '../../assets/img/projects/livingroom.jpg'
-import livingroom2 from '../../assets/img/projects/livingroom2.jpg'
-import room from '../../assets/img/projects/room.jpg'
-import oven from '../../assets/img/projects/OVEN-NEW.jpeg'
-import fridge from '../../assets/img/projects/fridgereplace.jpg'
+import TopNavbar from "../components/Nav/TopNavbar";
+import Footer from '../components/Sections/Footer';
+import Contact from "../components/Sections/Contact";
+import poolroom from '../assets/img/poolroom.jpg'
+import livingroom from '../assets/img/livingroom.jpg'
+import bedroom from '../assets/img/bedroom.jpg'
 
 export default function Landlords() {
-  const images = [bathroomtiles, bathroom,bathroomtiles, bathroomtiles2,livingroom,livingroom2,fridge, oven, room];
+  const images = [livingroom, poolroom,bedroom];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -28,22 +23,28 @@ export default function Landlords() {
     <>
       <TopNavbar />
       <Container>
-        <Header>Our Work</Header>
+        <Header>Landlords</Header>
         <ContentAndSlideshowWrapper>
           <ContentSection>
-            <SubHeader>How we help.</SubHeader>
+            <SubHeader>From one Landlord to Another</SubHeader>
             <Paragraph>
-              We have been carrying our various property maintenance related services for landlords, solicitors, letting agents and individuals
+              I’m a landlord myself, so I know how frustrating it can be at
+              times having to deal with the different aspects that come with it.
+              That’s why I am offering a guaranteed rent service, paired with
+              any minor refurbishment work needed to improve the quality of your
+              property. This hassle-free package also includes seamless
+              maintenance, making property ownership more straightforward and
+              financially secure.
             </Paragraph>
             <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '0.5rem' }}>
-             Services:
+              Benefits at a Glance:
             </h3>
             <BenefitsList>
-              <BenefitItem>✔ Deep cleaning</BenefitItem>
-              <BenefitItem>✔ Kitchen Fitting</BenefitItem>
-              <BenefitItem>✔ Bathroom fitting</BenefitItem>
-              <BenefitItem>✔ Waste/Furntiure removal</BenefitItem>
-              <BenefitItem>✔ Handyman repair</BenefitItem>
+              <BenefitItem>✔ Guaranteed rent with contracts up to 5 years</BenefitItem>
+              <BenefitItem>✔ No missed payments</BenefitItem>
+              <BenefitItem>✔ No agency fees</BenefitItem>
+              <BenefitItem>✔ Regular maintenance and clean</BenefitItem>
+              <BenefitItem>✔ Hassle-free experience</BenefitItem>
             </BenefitsList>
           </ContentSection>
 
@@ -55,7 +56,8 @@ export default function Landlords() {
           </SlideshowContainer>
         </ContentAndSlideshowWrapper>
       </Container>
-
+      <Contact />
+      <Footer />
     </>
   );
 }
